@@ -13,39 +13,52 @@
     
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <div class="logos">
-                <img src="images/ic-logo.png" class="logo-login" id="ic-logo" alt="Logo do Instituto de Computação">
-                <img src="images/ufmt-logo.png" class="logo-login" alt="Logo da Universidade Federal de Mato Grosso">
-            </div>
             <form>
-                <h1>Crie sua conta</h1>                
-                <input type="text" placeholder="Nome">
-                <input oninput="mascara(this)" type="text" placeholder="CPF">
-                <input type="password" placeholder="Senha">
-                <button>Cadastre-se</button>
+                <div class="logos">
+                    <img src="images/ic-logo.png" class="logo-login" id="ic-logo" alt="Logo do Instituto de Computação">
+                    <img src="images/ufmt-logo.png" class="logo-login" alt="Logo da Universidade Federal de Mato Grosso">
+                </div>
+                
+                <div class="input-form">
+                    <h1 class="title">Crie sua conta</h1>              
+
+                    <input type="text" placeholder="Nome">
+                    <input oninput="mascara(this)" type="text" placeholder="CPF">
+                    <input type="password" placeholder="Senha">
+
+                    <button>Cadastre-se</button>
+                </div>
             </form>
         </div>
+
         <div class="form-container sign-in">
-            <div class="logos">
-                <img src="images/ic-logo.png" class="logo-login" id="ic-logo" alt="Logo do Instituto de Computação">
-                <img src="images/ufmt-logo.png" class="logo-login" alt="Logo da Universidade Federal de Mato Grosso">
-            </div>
             <form>
-                <h1>Login</h1>            
-                <input oninput="mascara(this)" type="text" placeholder="Digite seu CPF">
-                <input type="password" placeholder="Digite sua senha">
-                <a href="#">Esqueceu sua Senha?</a>
-                <button>Entrar</button>
+                <div class="logos">
+                    <img src="images/ic-logo.png" class="logo-login" id="ic-logo" alt="Logo do Instituto de Computação">
+                    <img src="images/ufmt-logo.png" class="logo-login" alt="Logo da Universidade Federal de Mato Grosso">
+                </div>
+            
+                <div class="input-form">
+                    <h1 class="title">Login</h1>     
+
+                    <input oninput="mascara(this)" type="text" placeholder="Digite seu CPF">
+                    <input type="password" placeholder="Digite sua senha">
+                    <a href="#">Esqueceu sua Senha?</a>
+
+                    <button>Entrar</button>
+                </div>
             </form>
         </div>
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
+
+        <div class="transition-container">
+            <div class="transition">
+                <div class="transition-panel transition-left">
                     <h1>Bem-vindo novamente!</h1>
                     <p>Sentimos sua falta. Faça o Login no botão abaixo para utilizar o Sistema Acadêmico!</p>
                     <button class="hidden" id="login">Realize seu login</button>
                 </div>
-                <div class="toggle-panel toggle-right">
+
+                <div class="transition-panel transition-right">
                     <h1>Novo por aqui?</h1>
                     <p>Seja muito bem-vindo! Clique no botão abaixo <br> e faça seu cadastro para utilizar o Sistema Acadêmico</p>
                     <button class="hidden" id="register">Cadastre-se aqui!</button>
