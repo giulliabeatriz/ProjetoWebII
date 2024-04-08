@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
+@media (min-width: 400px) {
+    .input-form  {
+        width: 60%;
+        height: 63%
+    }
+}
+
+/* Para telas menores ou iguais a 400px (celulares) */
+@media (max-width: 400px) {
+    .input-form {
+        width: 80%;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -17,6 +31,23 @@ body{
     height: 100vh;
 }
 
+.logos {
+    display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    gap: 15px;    
+    margin-bottom: 25px;
+}
+
+    .logo-login {
+        max-width: 320px; 
+    }
+
+        #ic-logo {
+            width: 200px;
+        }   
+
 
 .container{
     background-color: #fff;
@@ -26,6 +57,8 @@ body{
     width: 100%;
     max-width: 100%;
     min-height: 100%;
+    display: flex;
+        align-items: center;
 }
 
 .container p{
@@ -33,6 +66,10 @@ body{
     line-height: 20px;
     letter-spacing: 0.3px;
     margin: 20px 0;
+}
+
+.title {
+    font-size: clamp(1.3rem, (2,5rem), 4rem);
 }
 
 .container span{
@@ -65,14 +102,24 @@ body{
     border-color: #fff;
 }
 
+.input-form {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    margin: 15px;
+    border: 2px solid #0e76bc;
+    min-height: fit-content;
+}
+
 .container form{
     background-color: #fff;
     display: flex;
-    align-items: center;
+    align-items: center !important;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
-    height: 100%;
+    padding: 0;
+    height: 100vh;
 }
 
 .container input{
@@ -132,7 +179,7 @@ body{
     margin: 20px 0;
 }
 
-.toggle-container{
+.transition-container{
     position: absolute;
     top: 0;
     left: 50%;
@@ -144,12 +191,12 @@ body{
     z-index: 1000;
 }
 
-.container.active .toggle-container{
+.container.active .transition-container{
     transform: translateX(-100%);
     border-radius: 0 150px 100px 0;
 }
 
-.toggle{
+.transition{
     background-color: #0e76bc;
     height: 100%;
     background: linear-gradient(to right, #0e76bc, #67b6eb);
@@ -162,11 +209,11 @@ body{
     transition: all 0.6s ease-in-out;
 }
 
-.container.active .toggle{
+.container.active .transition{
     transform: translateX(50%);
 }
 
-.toggle-panel{
+.transition-panel{
     position: absolute;
     width: 50%;
     height: 100%;
@@ -181,19 +228,19 @@ body{
     transition: all 0.6s ease-in-out;
 }
 
-.toggle-left{
+.transition-left{
     transform: translateX(-200%);
 }
 
-.container.active .toggle-left{
+.container.active .transition-left{
     transform: translateX(0);
 }
 
-.toggle-right{
+.transition-right{
     right: 0;
     transform: translateX(0);
 }
 
-.container.active .toggle-right{
+.container.active .transition-right{
     transform: translateX(200%);
 }
